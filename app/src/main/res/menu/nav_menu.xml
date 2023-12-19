@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <item
+        android:id="@+id/nav_home"
+        android:title="@string/home"
+        android:icon="@drawable/baseline_home_24"
+        />
+    <item
+        android:id="@+id/nav_about"
+        android:title="@string/about"
+        android:icon="@drawable/baseline_info_24"
+        />
+    <item
+        android:id="@+id/nav_logout"
+        android:title="@string/log_out"
+        android:icon="@drawable/baseline_sensor_door_24"
+        />
+
+
+</menu>
