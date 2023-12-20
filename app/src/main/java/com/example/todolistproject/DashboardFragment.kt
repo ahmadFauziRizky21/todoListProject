@@ -1,4 +1,5 @@
 package com.example.todolistproject
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -54,6 +55,7 @@ class DashboardFragment : Fragment() {
         progressDialog.show()
 
         eventListener = databaseReference.addValueEventListener(object : ValueEventListener {
+            @SuppressLint("NotifyDataSetChanged")
             override fun onDataChange(snapshot: DataSnapshot) {
                 dataList.clear()
                 for (itemSnapshot in snapshot.children) {
