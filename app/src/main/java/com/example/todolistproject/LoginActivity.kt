@@ -18,6 +18,10 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
         firebaseAuth = FirebaseAuth.getInstance()
 
+        binding.registerJump.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent);
+        }
 
         binding.btnLogin.setOnClickListener {
             val email = binding.email.text.toString().trim()
@@ -25,7 +29,7 @@ class LoginActivity : AppCompatActivity() {
             if (email.isNotEmpty() && pass.isNotEmpty() ) {
                 firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener {
                     if (it.isSuccessful) {
-                        val intent = Intent(this, LoginActivity::class.java)
+                        val intent = Intent(this, MainActivity::class.java)
                         startActivity(intent)
                     } else {
                         Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
@@ -34,6 +38,8 @@ class LoginActivity : AppCompatActivity() {
             }
         }
     }
+
+
     override fun onStart() {
         super.onStart()
 

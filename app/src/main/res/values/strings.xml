@@ -17,8 +17,8 @@
     <string name="login">Login</string>
     <string name="register">Register</string>
     <string name="confirm_password">confirm password</string>
-    <string name="already_have_account_sign_in">Already have Account? Sign in</string>
-    <string name="don_t_have_account_sign_up">Don\'t have Account? Sign Up.</string>
+    <string name="already_have_account">Already have Account?</string>
+    <string name="don_t_have_account">Don\'t have Account?</string>
     <string name="full_name">Full Name</string>
     <string name="username">username</string>
     <string name="home">Home</string>
@@ -35,5 +35,9 @@
     <string name="checkbox">Checkbox</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="new_task">New Task</string>
+    <string name="loading">Loading...</string>
+    <string name="name">Name</string>
+    <string name="sign_up">Sign Up</string>
 
 </resources>
