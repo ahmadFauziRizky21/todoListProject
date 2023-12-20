@@ -7,8 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.todolistproject.databinding.ActivityUploadBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
-import java.text.DateFormat
-import java.util.Calendar
 
 class UploadActivity : AppCompatActivity() {
     private lateinit var binding: ActivityUploadBinding
@@ -47,8 +45,6 @@ class UploadActivity : AppCompatActivity() {
         val isChecked : Boolean = false
 
         val todoClass = TodoList(name, desc, isChecked)
-        val currDate = DateFormat.getDateInstance().format(Calendar.getInstance().time)
-
         val todoId = todoRef.push().key
         todoRef.child(todoId ?: "").setValue(todoClass).addOnCompleteListener() {
             task ->

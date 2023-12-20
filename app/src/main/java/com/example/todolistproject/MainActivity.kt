@@ -1,5 +1,3 @@
-@file:Suppress("DEPRECATION")
-
 package com.example.todolistproject
 
 import android.os.Bundle
@@ -32,14 +30,14 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun setUpNavBottom() {
-        fm.beginTransaction().add(R.id.nav_home,fragHome).show(fragHome).commit()
-        fm.beginTransaction().add(R.id.nav_profile,fragProfile).hide(fragProfile).commit()
 
         bottomNavigationView = binding.navView
         menu = bottomNavigationView.menu
         menuItem = menu.getItem(0)
         menuItem.isChecked = true
 
+        fm.beginTransaction().add(R.id.nav_home,fragHome).show(fragHome).commit()
+        fm.beginTransaction().add(R.id.nav_profile,fragProfile).hide(fragProfile).commit()
         bottomNavigationView.setOnNavigationItemReselectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> {

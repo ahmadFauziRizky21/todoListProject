@@ -68,7 +68,6 @@
             android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             android:text="@string/log_out"
-            app:layout_constraintCircleRadius="@dimen/material_emphasis_medium"
             android:background="@color/blueMine"
             android:textColor="@color/white"
             app:layout_constraintHorizontal_bias="0.500"
