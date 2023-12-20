@@ -86,6 +86,6 @@
         android:id="@+id/loginJump"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/already_have_account_sign_in" />
+        android:hint="@string/already_have_account" />
 
 </LinearLayout>
